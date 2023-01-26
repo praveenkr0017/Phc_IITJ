@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Primary Health Centre - IIT Jodhpur</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="{% static './styles/css' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static './styles/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static './styles/bootstrap-icons.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File --> 
+  <link href="{% static './styles/style.css' %}" rel="stylesheet">
+  
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top" style="background:#593ad2; border-bottom: 3px solid #593ad2;">
+  <div class="container">
+   <div class="row">
+      <div class="col-md-12">
+        <img src="{% static './images/header_new.jpg' %}" alt="" class="img-fluid">
+      </div>
+   </div>
+  </div>
+</header>
+<!-- End Header -->
+
+
+<!--Navigation bar starts-->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>      
+      <li class="dropdown">  
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Register
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="register_student">Students</a></li>
+          <li><a href="register_employee">Employee</a></li>
+        </ul>
+      </li>
+      <li><a href="login">Login</a></li>    
+      <li><a href="contact">Contact</a></li>    
+      <!--<li><a href="#" target="_blank" style="padding: 8px 20px; background: green; border: 1px solid green; color: #fff !important;">Registration</a></li>
+ -->   </ul>
+  </div>
+</nav>
+<!--Navigation bar ends-->
+
+
+<!--Phc Photo-->
+<div>
+  <img src="{% static 'images\Phc.jpg' %}" width="100%">
+</div>
+<!--Phc Photo end-->
+
+  <main id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <p><b>Primary Health Center in Permanent Campus of IIT Jodhpur received ISO Certification</b>.</p>
+            <p>A Primary Health Center (PHC) has been started at the Permanent Campus of IIT Jodhpur from 15 June 2017. This fully equipped and self-sufficient facility is run by M/s. Goyal Hospital & Research Center Private Limited, Jodhpur. The facility is available to the residents of the Permanent Campus in Karwar. Presently, the following facilities available at the PHC:</p>
+            <p></p><ul>
+              <li>1. 	Qualified Medical Doctors,</li> <br>
+              <li>2. 	Qualified Medical Doctors,</li> <br>
+              <li>3. 	Paramedical Staff,</li> <br>
+              <li>4. 	Physiotherapy Unit,</li> <br>
+              <li>5. 	Pharmacy,</li> <br>
+              <li>6. 	24 Hours Emergency Room, and</li><br>
+              <li>7. 	an ICU Ambulance.</li>
+            </ul>
+            <p></p>
+            <p>The PHC is ISO Certified.</p>
+        </div>    
+      </div>
+    </div>
+  </main>
+   <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+
+    <div class="container footer-bottom clearfix">
+      <div class="google  map">
+        <iframe align="right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.2085514596943!2d73.11740831496073!3d26.48122918331537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3941eb939e346093%3A0xffb46917e7799d70!2sPHC%2C%20IITJ!5e0!3m2!1sen!2sin!4v1664446349665!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="credits">
+
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+
+  <script src="{% static './styles/jquery-3.6.0.min.js.download' %}"></script>
+  <script src="{% static './styles/bootstrap.min.js.download' %}"></script>
+<script>
+  $('.carousel').carousel();
+
+  $(document).on('click', '.panel-heading span.clickable', function(e){
+    var $this = $(this);
+    
+  if(!$this.hasClass('panel-collapsed')) {
+    $this.parents('.panel').find('.panel-body').slideUp();
+    $this.addClass('panel-collapsed');
+    $this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+  } else {
+    $this.parents('.panel').find('.panel-body').slideDown();
+    $this.removeClass('panel-collapsed');
+    $this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+  }
+})
+</script>
+
+
+ 
+
+</body></html>

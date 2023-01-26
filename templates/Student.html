@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Student Details - Primary Health Centre - IIT Jodhpur</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+  <link href="{% static './styles/css' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static './styles/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static './styles/bootstrap-icons.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File 
+  <link href="./Indian Institute of Technology Jodhpur_files/style.css" rel="stylesheet">
+  --> 
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 20%;
+      position:fixed;
+      z-index: 1;
+      top: 1;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #efeded;
+      display: block;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+    #div_right {
+      width: 80%;
+      float: right;
+      font-family: Georgia, serif;
+    }
+
+    #div_horizontal {
+      width: 100%;
+      height: 20%;
+      background-color: #0f0f0f; 
+    }
+
+    .wrapper {
+      height: 70px;
+      width: 300px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+
+
+
+
+<!-- ======= Header ======= -->
+
+<header id="header" class="fixed-top" style="background:#593ad2; border-bottom: 3px solid #593ad2;">
+      <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+            <img src="{% static './images/header_new.jpg' %}" alt="" class="img-fluid">
+          </div>
+      </div>
+      </div>
+</header>  
+
+  <!-- End Header -->
+
+  
+
+  <!-- Side bar containing student details-->
+
+  <div class="sidenav">
+    <center>
+    <img src="{{user.profile_img.url}}" height="130">
+    <br>
+    <br>
+    <h4 style="color:rgb(200, 255, 71);">Name : {{user.name}}</h4>
+    <h4 style="color:rgb(200, 255, 71);">ID : {{user.ID}}</h4>
+    <h4 style="color:rgb(200, 255, 71);">Gender : {{user.gender}}</h4>
+    <h4 style="color:rgb(200, 255, 71);">Blood Group : {{user.blood_Group}}</h4>
+    <h4 style="color:rgb(200, 255, 71);">Mobile : {{user.mobile}}</h4>
+    <h4 style="color:rgb(200, 255, 71);">Email : {{user.email}}</h4>
+    <br>
+    <I><h4 style="color:rgb(200, 255, 71);">Your Passcode is:</h4></I>
+    <h1 style="color:rgb(255, 117, 71);">{{user.passcode}}</h1>
+    </center>
+    <div class="wrapper">
+      <a href="logout"><img src="{% static 'images\logout.png' %}" height="50"></a>
+    </div>
+  </div>
+
+  <!-- Side bar containing student Booklet details-->
+  
+  <div id="div_right">
+    <a href="update"><img src="{% static 'images\upload.png' %}" height="50" align="right"></a>
+    <center>
+      {% for presciption in presciptions %}
+        <h1>{{presciption.date}}</h1>
+        <img src="{{presciption.prescription_img.url}}" height="550" width="500">
+      {% endfor %}
+    </center>
+    
+  </div>
+
+
+
+
+
+
+</body>
+</html>

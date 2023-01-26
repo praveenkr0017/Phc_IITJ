@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Contact - Primary Health Centre - IIT Jodhpur</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="{% static './styles/css' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static './styles/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static './styles/bootstrap-icons.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File --> 
+  <link href="{% static './styles/style.css' %}" rel="stylesheet">
+  
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top" style="background:#593ad2; border-bottom: 3px solid #593ad2;">
+  <div class="container">
+   <div class="row">
+      <div class="col-md-12">
+        <img src="{% static './images/header_new.jpg' %}" alt="" class="img-fluid">
+      </div>
+   </div>
+  </div>
+</header>
+<!-- End Header -->
+
+
+<!--Navigation bar starts-->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">Home</a></li>      
+      <li class="dropdown">  
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Register
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="register_student">Students</a></li>
+          <li><a href="register_employee">Employee</a></li>
+        </ul>
+      </li>
+      <li><a href="login">Login</a></li>    
+      <li><a href="contact">Contact</a></li>    
+      <!--<li><a href="#" target="_blank" style="padding: 8px 20px; background: green; border: 1px solid green; color: #fff !important;">Registration</a></li>
+ -->   </ul>
+  </div>
+</nav>
+<!--Navigation bar ends-->
+
+<!--<h1>Information will be updated soon...</h1>-->
+<br>
+<h4> Medical Officer IITJ email : mo@iitj.ac.in</h4>
+<h4> Phc Ambulance Contact :  +91 8769905485</h4>
+<h5> Other Useful links:</h5>
+<h5><a href="https://www.aiims.edu/en.html">Aiims New Delhi</h5>
+<h5><a href="https://www.aiimsjodhpur.edu.in/">Aiims Jodhpur</h5>
+
+
+ 
+</body></html>

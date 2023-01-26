@@ -1,0 +1,55 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Update - Primary Health Centre - IIT Jodhpur</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link href="{% static './styles/css' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static './styles/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static './styles/bootstrap-icons.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File 
+  <link href="{% static './styles/style.css' %}" rel="stylesheet">
+  --> 
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top" style="background:#593ad2; border-bottom: 3px solid #593ad2;">
+  <div class="container">
+   <div class="row">
+      <div class="col-md-12">
+        <img src="{% static './images/header_new.jpg' %}" alt="" class="img-fluid">
+      </div>
+   </div>
+  </div>
+</header>
+<!-- End Header -->
+
+
+
+
+<form action="update" method="post" enctype="multipart/form-data"> 
+        
+    {% csrf_token %}
+
+    Date of Prescription 
+    <input type="date" name="date" placeholder="date"><br>
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload"><br>
+    <input class="btn btn-primary" type="submit">
+    
+</form>
+ 
+</body>
+</html>
